@@ -21,7 +21,7 @@ function Loading({ onComplete }) {
   }, [onComplete]);
 
   return (
-    <div className="fixed bottom-28  right-64  z-50 flex flex-col items-center justify-center">
+    <div className="fixed bottom-24  right-64  z-50 flex flex-col items-center justify-center">
       <motion.div
         initial={{ scale: 1 }}
         animate={{ scale: 1  }}
