@@ -9,10 +9,8 @@ function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 2, ease: 'easeOut' }}
     >
-      <div className="logo">
-      <svg width="150" height="40" viewBox="0 0 150 30" fill="white" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="20" fontSize="30" fontFamily="Arial, sans-serif" fill="currentColor">am.</text>
-        </svg>
+      <div className="logo ">
+      <p className='text-3xl '>am.</p>
       </div>
       <div className="links flex gap-10">
         {['Home', 'About', 'Contact', 'Projects'].map((item, index) => (

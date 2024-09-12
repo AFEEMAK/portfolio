@@ -14,7 +14,7 @@ function Landing({loading}) {
         <div className="textstructure mt-32 px-20">
             {["afee","maknojia","Developer"].map((item,index)=>{
                 return  (
-                    <div className="masker">
+                    <div  key={index} className="masker">
                     <div className='w-fit flex items-center'>
                          {index === 1 && (<motion.div initial={{width:'0'}} animate={{width:'8vw'}} transition={{ease : [0.76, 0, 0.24, 1],duration: 1,delay:3}}  className='w-[8vw] h-[6vw] relative top-[1vw] bg-red-500'></motion.div>)}   
                         <h1 className='lowercase text-[10vw] font-["Familjen_Grotesk"] leading-[7.2vw] tracking-tighter font-semibold'>{item}</h1>

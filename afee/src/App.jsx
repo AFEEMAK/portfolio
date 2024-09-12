@@ -5,6 +5,7 @@ import Loading from './components/Loading';
 import { motion, AnimatePresence } from 'framer-motion';
 import Footer from './components/Footer/Footer';
 import Lenis from 'lenis';
+import Project from './components/Project/Project';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -50,18 +51,18 @@ function App() {
         animate={{ x: 0}}
         exit={{ x: '-100%' }}
         transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-        className="absolute top-0 left-0 w-1/4 h-full bg-transparent z-0"
+        className={`absolute top-0 left-0 w-1/4 h-full bg-transparent z-0 ${isLoading ? 'opacity-1' : 'opacity-0 transition-all duration-[1500ms] ease-out'}`}
         style={{ boxShadow: '0 4px 8px rgba(82, 82, 91, 0.8)' }} // Optional: for better visibility
       >
         {/* Content for the left side element */}
       </motion.div>
       
       <motion.div
-        initial={{ x: '100%',opacity:1 }}
+        initial={{ x: '100%'}}
         animate={{ x: 0}}
         exit={{ x: '100%' }}
         transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-        className="absolute top-0 right-0 w-1/4 h-full bg-transparent z-0"
+        className={`absolute top-0 right-0 w-1/4 h-full bg-transparent z-0 ${isLoading ? 'opacity-1' : 'opacity-0 transition-all duration-[1500ms] ease-out'}`}
         style={{ boxShadow: '0 4px 8px rgba(82, 82, 91, 0.8)' }} // Optional: for better visibility
       >
         {/* Content for the right side element */}
@@ -77,6 +78,7 @@ function App() {
         </motion.div>
           
       </div>
+      <Project/>
       <Footer/>
     </div>
   );
