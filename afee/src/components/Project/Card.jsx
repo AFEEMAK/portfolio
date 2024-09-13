@@ -5,7 +5,7 @@ import {useFeatureStore} from './store'
 function Card({gradient, children, id}) {
     const inViewFeature = useFeatureStore((state)=> state.inViewFeature)
   return (
-    <div className={`absolute inset-0 h-full w-full rounded-2xl transition-all duration-[500ms] bg-gradient-to-br ${gradient} ${ inViewFeature === id ? 'opacity-1' : 'opacity-0'}`}>{children}</div>
+    <div className={`absolute inset-0 h-full w-full rounded-2xl transition-all ease-out duration-[100ms] bg-gradient-to-br ${gradient} ${ inViewFeature === id ? 'opacity-1' : 'opacity-0'}`}>{children}</div>
   )
 }
 

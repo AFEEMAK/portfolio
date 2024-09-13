@@ -28,8 +28,8 @@ const FEATURES = [
 
 function Project() {
   return (
-    <div className='mx-auto my-52 max-w-6xl px-8'>
-
+    <div className='mx-auto my-52 max-w-7xl px-8'>
+      <h2>my work</h2>
       <section className='w-full gap-20 flex items-start'>
         <div className='w-full py-[50vh]'>
           <ul>
@@ -38,7 +38,7 @@ function Project() {
             ))}
           </ul>
         </div>
-        <div className='sticky w-full top-0 h-screen flex items-center p-10'>
+        <div className='sticky w-full top-0 h-screen flex items-center p-16'>
           <div className='relative w-full aspect-square rounded-2xl bg-zinc-300'>
           {FEATURES.map(feature=>(
               <feature.card id={feature.id} key={feature.id}></feature.card>

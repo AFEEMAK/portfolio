@@ -47,22 +47,22 @@ function App() {
       {/* Main Screen */}
       <div className="bg-zinc-800 w-full h-full relative z-100">
       <motion.div
-        initial={{ x: '-100%' }}
-        animate={{ x: 0}}
+        initial={{ x: '-100%', scale: 0.6  }}
+        animate={{ x: '280%'}}
         exit={{ x: '-100%' }}
         transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-        className={`absolute top-0 left-0 w-1/4 h-full bg-transparent z-0 ${isLoading ? 'opacity-1' : 'opacity-0 transition-all duration-[1500ms] ease-out'}`}
+        className={`absolute top-0 left-0 w-1/4 h-full bg-zinc-500 opacity-70 rounded-3xl z-7 ${isLoading ? 'opacity-1' : 'opacity-0 transition-all duration-[1500ms] ease-out'}`}
         style={{ boxShadow: '0 4px 8px rgba(82, 82, 91, 0.8)' }} // Optional: for better visibility
       >
         {/* Content for the left side element */}
       </motion.div>
       
       <motion.div
-        initial={{ x: '100%'}}
-        animate={{ x: 0}}
+        initial={{ x: '100%',scale: 0.65}}
+        animate={{ x: '-30%'}}
         exit={{ x: '100%' }}
         transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-        className={`absolute top-0 right-0 w-1/4 h-full bg-transparent z-0 ${isLoading ? 'opacity-1' : 'opacity-0 transition-all duration-[1500ms] ease-out'}`}
+        className={`absolute top-0 right-0 w-1/4 h-full rounded-3xl bg-zinc-500 opacity-40 z- ${isLoading ? 'opacity-1' : 'opacity-0 transition-all duration-[1500ms] ease-out'}`}
         style={{ boxShadow: '0 4px 8px rgba(82, 82, 91, 0.8)' }} // Optional: for better visibility
       >
         {/* Content for the right side element */}
